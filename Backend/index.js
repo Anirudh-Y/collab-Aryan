@@ -8,7 +8,7 @@ const mongoDB = require("mongodb")
 const collections = require("./models")
 const md5 = require("md5")
 
-const MONGO_URL = "mongodb+srv://hacky:123@cluster0.y9wcv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const MONGO_URL = "mongodb+srv://aryan:ermal@cluster0.7ifht.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
 const Person = collections.Person
 const Image = collections.Image
@@ -126,8 +126,8 @@ app.post("/signup", (req, res) => {
     })
 
     newEntry.save().then((data) => {
-        res.status(200).send({ successMsg: "Succefully Created a User" })
-    }).catch((err) => res.status(500).send({ errMsg: "Already exists" }))
+        res.status(200).send({ message: "Succefully Created a User" })
+    }).catch((err) => res.status(500).send({ message: "Already exists" }))
 
 })
 
