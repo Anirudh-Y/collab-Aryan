@@ -22,6 +22,10 @@ const imageSchema = new mongoose.Schema({
     imageURL: {
         type: String,
         required: true,
+    },
+    property: {
+        type: String,
+        required:true
     }
 })
 

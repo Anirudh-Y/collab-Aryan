@@ -68,7 +68,7 @@ app.get("/admin/images", (req, res) => {
 
 app.post("/admin/images", (req, res) => {
     // console.log(req.body);
-    const urlNew = new Image({ imageURL: req.body.url })
+    const urlNew = new Image({ imageURL: req.body.url , property:req.body.type })
 
     urlNew.save().then(data => {
         // console.log(data);
